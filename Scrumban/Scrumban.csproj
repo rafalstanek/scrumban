@@ -1,0 +1,177 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+    <Platforms>AnyCPU;x86;x64</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Content Remove="$(SpaRoot)**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\package-lock.json" />
+    <None Remove="ClientApp\src\components\AdminPanel\AdminIndex.js" />
+    <None Remove="ClientApp\src\components\AdminPanel\AdminIndex.js.map" />
+    <None Remove="ClientApp\src\components\AdminPanel\AdminIndex.tsx" />
+    <None Remove="ClientApp\src\components\AdminPanel\AdminPanelLayout.js" />
+    <None Remove="ClientApp\src\components\AdminPanel\AdminPanelLayout.js.map" />
+    <None Remove="ClientApp\src\components\AdminPanel\AdminPanelLayout.tsx" />
+    <None Remove="ClientApp\src\components\AdminPanel\AdminPanelNav.js" />
+    <None Remove="ClientApp\src\components\AdminPanel\AdminPanelNav.js.map" />
+    <None Remove="ClientApp\src\components\AdminPanel\AdminPanelNav.tsx" />
+    <None Remove="ClientApp\src\components\AdminPanel\ProjectTable.js" />
+    <None Remove="ClientApp\src\components\AdminPanel\ProjectTable.js.map" />
+    <None Remove="ClientApp\src\components\AdminPanel\ProjectTable.tsx" />
+    <None Remove="ClientApp\src\components\AdminPanel\UserTable.js" />
+    <None Remove="ClientApp\src\components\AdminPanel\UserTable.js.map" />
+    <None Remove="ClientApp\src\components\AdminPanel\UserTable.tsx" />
+    <None Remove="ClientApp\src\components\common\DefaultFormGroup.js" />
+    <None Remove="ClientApp\src\components\common\DefaultFormGroup.js.map" />
+    <None Remove="ClientApp\src\components\common\DefaultFormGroup.tsx" />
+    <None Remove="ClientApp\src\components\common\ModalProps.js" />
+    <None Remove="ClientApp\src\components\common\ModalProps.js.map" />
+    <None Remove="ClientApp\src\components\common\useFetch.js" />
+    <None Remove="ClientApp\src\components\common\useFetch.js.map" />
+    <None Remove="ClientApp\src\components\common\useFetch.tsx" />
+    <None Remove="ClientApp\src\components\common\useLogin.js" />
+    <None Remove="ClientApp\src\components\common\useLogin.js.map" />
+    <None Remove="ClientApp\src\components\common\useLogin.tsx" />
+    <None Remove="ClientApp\src\components\common\useModals.js" />
+    <None Remove="ClientApp\src\components\common\useModals.js.map" />
+    <None Remove="ClientApp\src\components\common\useModals.tsx" />
+    <None Remove="ClientApp\src\components\modal\ModalConfirm.js" />
+    <None Remove="ClientApp\src\components\modal\ModalConfirm.js.map" />
+    <None Remove="ClientApp\src\components\modal\ModalConfirm.tsx" />
+    <None Remove="ClientApp\src\components\modal\ModalContainer.js" />
+    <None Remove="ClientApp\src\components\modal\ModalContainer.js.map" />
+    <None Remove="ClientApp\src\components\modal\ModalContainer.tsx" />
+    <None Remove="ClientApp\src\components\modal\ModalLogin.js" />
+    <None Remove="ClientApp\src\components\modal\ModalLogin.js.map" />
+    <None Remove="ClientApp\src\components\modal\ModalLogin.tsx" />
+    <None Remove="ClientApp\src\components\modal\ModalProject.js" />
+    <None Remove="ClientApp\src\components\modal\ModalProject.js.map" />
+    <None Remove="ClientApp\src\components\modal\ModalProject.tsx" />
+    <None Remove="ClientApp\src\components\modal\ModalProjectUser.js" />
+    <None Remove="ClientApp\src\components\modal\ModalProjectUser.js.map" />
+    <None Remove="ClientApp\src\components\modal\ModalTask.js" />
+    <None Remove="ClientApp\src\components\modal\ModalTask.js.map" />
+    <None Remove="ClientApp\src\components\modal\ModalTask.tsx" />
+    <None Remove="ClientApp\src\components\modal\ModalUser.js" />
+    <None Remove="ClientApp\src\components\modal\ModalUser.js.map" />
+    <None Remove="ClientApp\src\components\modal\ModalUser.tsx" />
+    <None Remove="ClientApp\src\components\ScrumbanTable.js" />
+    <None Remove="ClientApp\src\components\ScrumbanTable.js.map" />
+    <None Remove="ClientApp\src\components\ScrumbanTable.tsx" />
+    <None Remove="ClientApp\src\store\AppUser.js" />
+    <None Remove="ClientApp\src\store\AppUser.js.map" />
+    <None Remove="ClientApp\src\store\AppUser.ts" />
+    <None Remove="ClientApp\src\store\index.js" />
+    <None Remove="ClientApp\src\store\index.js.map" />
+    <None Remove="ClientApp\src\store\Message.js" />
+    <None Remove="ClientApp\src\store\Message.js.map" />
+    <None Remove="ClientApp\src\store\Message.ts" />
+    <None Remove="ClientApp\src\store\Modal.js" />
+    <None Remove="ClientApp\src\store\Modal.js.map" />
+    <None Remove="ClientApp\src\store\Modal.ts" />
+    <None Remove="ClientApp\src\store\project.js" />
+    <None Remove="ClientApp\src\store\project.js.map" />
+    <None Remove="ClientApp\src\store\Project.ts" />
+    <None Remove="ClientApp\src\store\Task.js" />
+    <None Remove="ClientApp\src\store\Task.js.map" />
+    <None Remove="ClientApp\src\store\Task.ts" />
+    <None Remove="ClientApp\src\store\User.js" />
+    <None Remove="ClientApp\src\store\User.js.map" />
+    <None Remove="ClientApp\src\store\User.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Scrumban.Data\Scrumban.Data.csproj" />
+    <ProjectReference Include="..\Scrumban.RepositoryInterface\Scrumban.RepositoryInterface.csproj" />
+    <ProjectReference Include="..\Scrumban.Repository\Scrumban.Repository.csproj" />
+    <ProjectReference Include="..\Scrumban.ServiceInterface\Scrumban.ServiceInterface.csproj" />
+    <ProjectReference Include="..\Scrumban.Service\Scrumban.Service.csproj" />
+    <ProjectReference Include="..\Scrumban.ViewModel\Scrumban.ViewModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\components\AdminPanel\AdminIndex.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\AdminPanel\AdminPanelLayout.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\AdminPanel\AdminPanelNav.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\AdminPanel\ProjectTable.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\AdminPanel\UserTable.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\common\DefaultFormGroup.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\common\useFetch.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\common\useLogin.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\common\useModals.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\modal\ModalContainer.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\modal\ModalConfirm.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\modal\ModalLogin.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\modal\ModalProject.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\modal\ModalTask.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\modal\ModalUser.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\ScrumbanTable.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\store\AppUser.ts" />
+    <TypeScriptCompile Include="ClientApp\src\store\Message.ts" />
+    <TypeScriptCompile Include="ClientApp\src\store\Modal.ts" />
+    <TypeScriptCompile Include="ClientApp\src\store\Project.ts" />
+    <TypeScriptCompile Include="ClientApp\src\store\Task.ts" />
+    <TypeScriptCompile Include="ClientApp\src\store\User.ts" />
+  </ItemGroup>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)build\**; $(SpaRoot)build-ssr\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+</Project>

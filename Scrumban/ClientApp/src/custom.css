@@ -1,0 +1,47 @@
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+code {
+    color: #E01A76;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.task-column .card {
+    border-radius: 8px;
+}
+
+.task-column .card-header {
+}
+
+.task-column .list-group {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: lightcyan;
+}
+
+.task-column .list-group-item:first-child {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.task-column .list-group-item:first-child {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.task-column .list-group-item {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.task-column .card-footer {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
